@@ -1,3 +1,4 @@
+import { Link, Stack } from 'expo-router'
 import { StyleSheet, Text, View, Image, Button, Alert } from 'react-native'
 
 import Logo from '../assets/images/logo.png'
@@ -16,7 +17,9 @@ const Home = () => {
         <Text style={{color:'gray'}}>Még neked se</Text>
         <Text style={styles.bold}>Jancsi!</Text>
       </View>
-      <Button style={{marginTop:15}} title='Party' onPress={()=>{}} />
+      <Link href="/party">
+        <Button style={{marginTop:15}} title='Party' onPress={()=>{}} />
+      </Link>
     </View>
 
   )
