@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+import { customStyle } from './style'
 
 const party = () => {
   const [data, setData] = useState(null);
@@ -20,15 +21,26 @@ const party = () => {
   }, []);
 
   return (
-    <View>
-      <Text>party</Text>
+    <View style={customStyle.screen}>
+      <View style={customStyle.header}>
+        <Text style={customStyle.headerText}>Select users to create a party!</Text>
+      </View>
+      
       {loading && <Text>Loading...</Text>}
       {error && <Text>Error: {error}</Text>}
-      {data && <Text>{JSON.stringify(data, null, 2)}</Text>}
+
+      {data && Array.isArray(data) && data.map((user, idx) => (
+        <View key={user.id || idx} style={customStyle.listItem}>
+          <Text>{user.name ? user.name : JSON.stringify(user)}</Text>
+        </View>
+      ))}
+
     </View>
   );
 }
 
 export default party
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+
+})
