@@ -1,5 +1,5 @@
 import { Link, Stack } from 'expo-router'
-import { StyleSheet, Text, View, Image, Button, Alert } from 'react-native'
+import { StyleSheet, Text, View, Image, Button, Alert,Pressable } from 'react-native'
 import { customStyle } from './style'
 
 import Logo from '../assets/images/logo.png'
@@ -28,8 +28,6 @@ const Home = () => {
   )
 }
 
-
-import { Pressable } from 'react-native'
 export default Home
 
 const styles = StyleSheet.create({

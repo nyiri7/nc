@@ -7,19 +7,22 @@ export const customStyle = StyleSheet.create({
   },
   header:{
     backgroundColor:"blue",
-    padding: 10,
+    paddingTop: 20,
     width: '100%',
-    height: '10%'
+    paddingBottom:20,
+    position: "fixed",
+    top: 0,
   },
   headerText:{
     color: 'white',
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center',
   },
   listItem:{
-    padding: 10,
     backgroundColor: 'lightgray',
     width: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
   }
 })
